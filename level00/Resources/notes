@@ -1,0 +1,5 @@
+ls -lR / 2>/dev/null | grep flag00
+strings /usr/sbin/john
+> cdiiddwpgswtgt
+
+bruteforce ROT > +15: nottoohardhere
