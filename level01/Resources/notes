@@ -1,0 +1,7 @@
+le nom du fichier a trouver dans level00 : john
+
+on se renseigne un peu sur le logiciel john, permet de cracker des passwords
+sur linux : /etc/passwd
+scp -P 2222 level01@127.0.0.1:/etc/passwd .
+john passwd
+=> abcdefg
