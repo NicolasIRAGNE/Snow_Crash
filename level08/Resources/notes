@@ -1,0 +1,5 @@
+l'executable lit le fichier mais il fait un strstr pour voir si ya 'token' dedans
+si oui il exit
+
+on fait un lien symbolique vers token qui s'appelle autrement
+voila

@@ -1,0 +1,6 @@
+on peut injecter une lib dynamique avec 
+LD_LIBRARY_PATH=/tmp/
+LD_PRELOAD=/tmp/test.so
+
+mais ca marche pas
+dommage
