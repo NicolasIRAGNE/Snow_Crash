@@ -1,0 +1,6 @@
+avec gdb
+on voit qu'il call getenv pour recuperer la variable d'environnement LOGNAME
+puis il call asprintf avec "/bin/echo %s" ou %s est la chaine renvoyee par getenv
+puis il call system dessus
+on peut donc faire un "export LOGNAME='$(getflag)'"
+super
