@@ -1,0 +1,4 @@
+avec gdb on voit que l'executable fait un cmp de l'uid avec 4242 puis call ft_des pour dechiffrer le token chiffre
+ft_des est trop complexe a reverse alors on tente un truc plus simple
+on change la valeur de eax juste apres le retour de getuid pour 4242
+...voila

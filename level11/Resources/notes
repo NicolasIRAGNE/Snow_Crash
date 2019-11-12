@@ -1,0 +1,8 @@
+avec nc on se connecte au port 5151
+nc -v 127.0.0.1 5151
+
+ensuite on regarde le .lua pour voir ce qu'il fait
+il fait un check du password avec un sha1sum, on peut pas le reverse et en plus ca fait rien
+DONC on essaye d'exploiter la commande qu'il utilise avec le popen
+on essaye donc la string $(getflag) 1>/tmp/a pour rediriger la sortie du echo dans un autre fichier
+tadam

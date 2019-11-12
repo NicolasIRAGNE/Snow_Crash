@@ -1,0 +1,15 @@
+l'executable prend en parametres un fichier et une adresse sur le port 6969 et envoie son contenu dessus
+
+avec nc -l 6969 on ecoute sur le port 6969
+on peut donc utiliser 127.0.0.1 comme host
+
+le fichier token est readable par flag10 et level10 a les permissions flag10
+
+avec une inspection rapide du binaire on s'apercoit qu'il utilise l'appel systeme access() qui verifie si un utilisateur peut acceder au fichier
+dans le man access on peut voir que son utilisation est deconseillee, on peut faire une race condition et remplacer un fichier accessible par un lien symbolique vers le token
+
+on fait donc deux scripts que l'on va lancer en meme temps, le premier qui va creer un fichier, le supprimer, puis faire un lien symbolique vers token en boucle, et un autre qui va lancer le binaire en boucle
+
+on a plus qu'a ecouter sur le port 6969 et esperer que le timing soit bon
+au bout de quelques secondes, on voit le flag
+:)

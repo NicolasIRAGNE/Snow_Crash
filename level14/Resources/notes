@@ -1,0 +1,13 @@
+aucun executable
+pas de mail
+
+on test de reverse getflag
+avec gdb
+
+il call ptrace pour voir si on reverse
+on override eax par 0
+
+puis on voit plein de cmp apres un getuid
+jusqu'ici les id des flag c'est id level + 1000
+alors on tente de set eax a 3014
+ca marche on a le token
