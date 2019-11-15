@@ -1,0 +1,10 @@
+on a un script perl qui indique localhost:4646
+
+il fait une regex qui change les minuscules en majuscules et enleve les espaces puis execute
+il faut trouver un moyen de call getflag
+
+on ecrit un script avec un nom en majuscules dans /tmp qui fait juste un getflag et qui redirige dans un autre fichier
+puis on peut simplement le call en faisant /*/SCRIPT
+
+avec le perl ca donne:
+curl localhost:4646?x='`/*/SCRIPT`'
