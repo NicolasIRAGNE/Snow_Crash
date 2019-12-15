@@ -8,7 +8,7 @@ main()
 	int i = 0;
 	int j = read(fd, buf, 256);
 
-	while (i < j)
+	while (i < j - 1)
 	{
 		printf("%c", buf[i] - i);
 		i++;
